@@ -14,6 +14,17 @@ To get started with examples, see the following notebooks:
  * [text2pointcloud.ipynb](point_e/examples/text2pointcloud.ipynb) - use our small, worse quality pure text-to-3D model to produce 3D point clouds directly from text descriptions. This model's capabilities are limited, but it does understand some simple categories and colors.
  * [pointcloud2mesh.ipynb](point_e/examples/pointcloud2mesh.ipynb) - try our SDF regression model for producing meshes from point clouds.
 
+## CAE File Support
+
+Point-E now supports converting CAE (Nastran format) files to point cloud format:
+
+```bash
+# Convert CAE file to Point-E format
+python -m point_e.util.convert_cae input.cae output.npz --max-points 4096
+```
+
+For detailed documentation, see [CAE_CONVERSION_README.md](point_e/examples/CAE_CONVERSION_README.md).
+
 For our P-FID and P-IS evaluation scripts, see:
 
  * [evaluate_pfid.py](point_e/evals/scripts/evaluate_pfid.py)
